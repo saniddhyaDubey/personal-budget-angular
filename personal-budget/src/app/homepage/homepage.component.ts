@@ -3,6 +3,8 @@ import { ArticleComponent } from '../article/article.component';
 import { HttpClient } from '@angular/common/http';
 import Chart from 'chart.js/auto'
 import { CommonModule } from '@angular/common';
+import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
+import { D3BarComponent } from '../d3-bar/d3-bar.component';
 
 interface BudgetResponse {
   myBudget: { title: string; budget: number }[];
@@ -10,7 +12,7 @@ interface BudgetResponse {
 
 @Component({
   selector: 'pb-homepage',
-  imports: [ArticleComponent, CommonModule],
+  imports: [ArticleComponent, CommonModule, BreadcrumbsComponent, D3BarComponent],
   standalone: true,
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
